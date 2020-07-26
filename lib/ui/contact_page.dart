@@ -32,6 +32,11 @@ class _ContactPageState extends State<ContactPage> {
         title: Text(_editContact.name ?? "Novo Contato"),
         centerTitle: true,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.save),
+        backgroundColor: Colors.red,
+      ),
     );
   }
 }
