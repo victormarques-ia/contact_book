@@ -26,6 +26,12 @@ class _ContactPageState extends State<ContactPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: Text(_editContact.name ?? "Novo Contato"),
+        centerTitle: true,
+      ),
+    );
   }
 }
