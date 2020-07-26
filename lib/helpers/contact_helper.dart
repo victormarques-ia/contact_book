@@ -58,7 +58,7 @@ class ContactHelper {
     }
   }
 
-  Future<int>updateContact(Contact contact) async {
+  Future<int> updateContact(Contact contact) async {
     Database dbContact = await db; // getDb
     return await dbContact.update(contactTable, contact.toMap(),
         where: "$idColumn = ?", whereArgs: [contact.id]);
@@ -68,6 +68,18 @@ class ContactHelper {
     Database dbContact = await db; // getDb
     return await dbContact
         .delete(contactTable, where: "$idColumn = ?", whereArgs: [id]);
+  }
+
+  Future<List<Contact>>getAllContacts() async {
+    Database dbContact = await db; // getDb
+    List listMap = await dbContact.rawQuery("SELECT * FROM $contactTable");
+
+    List<Contact> listContact = List();
+    for (Map m in listMap) {
+      listContact.add(Contact.fromMap(m));
+    }
+
+    return listContact;
   }
 }
 
