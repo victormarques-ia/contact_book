@@ -35,7 +35,13 @@ class _HomePageState extends State<HomePage> {
         child: Icon(Icons.add),
         backgroundColor: Colors.red,
       ),
-      
+      body: ListView.builder(
+        padding: EdgeInsets.all(10.0),
+        itemCount: contacts.length,
+        itemBuilder: (context, index) {
+          
+        } 
+      ),
     );
   }
 }
