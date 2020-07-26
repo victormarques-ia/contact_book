@@ -70,7 +70,7 @@ class ContactHelper {
         .delete(contactTable, where: "$idColumn = ?", whereArgs: [id]);
   }
 
-  Future<List<Contact>>getAllContacts() async {
+  Future<List<Contact>> getAllContacts() async {
     Database dbContact = await db; // getDb
     List listMap = await dbContact.rawQuery("SELECT * FROM $contactTable");
 
@@ -80,6 +80,12 @@ class ContactHelper {
     }
 
     return listContact;
+  }
+
+  Future<int> getNumber() async {
+    Database dbContact = await db; // getDb
+    return Sqflite.firstIntValue(
+        await dbContact.rawQuery("SELECT COUNT(*) FROM $contactTable"));
   }
 }
 
