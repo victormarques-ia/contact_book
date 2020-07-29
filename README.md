@@ -1,16 +1,17 @@
-# contact_book
+# Contact Book
 
-A new Flutter project.
+It is a study app made by me, where you can add and edit contacts, in addition to the integration with the camera and also with the possibility of making calls.
 
-## Getting Started
+## How to run
 
-This project is a starting point for a Flutter application.
+The process to run this project in the best way can be followed by the Flutter documentation.
 
-A few resources to get you started if this is your first Flutter project:
+- [Flutter documentation](https://flutter.dev/docs/get-started/install)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Technologies and dependencies
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter** 
+- `cupertino_icons: ^0.1.3`
+- `sqflite: any`
+- `url_launcher: 5.5.0`
+- `image_picker: 0.4.5`
