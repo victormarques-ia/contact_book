@@ -2,6 +2,8 @@
 
 It is a study app made by me, where you can add and edit contacts, in addition to the integration with the camera and also with the possibility of making calls.
 
+![](https://github.com/victormarques-ia/contact_book/blob/develop/images/contact-book.gif)
+
 ## How to run
 
 The process to run this project in the best way can be followed by the Flutter documentation.
